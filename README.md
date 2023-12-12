@@ -1,5 +1,9 @@
 # taro-svga
 
+## Supporting platforms
+
+**weapp h5 tt rn**
+
 ## Installing
 
 ```
@@ -39,6 +43,7 @@ const App = () => {
   );
 };
 ```
+![img](./angle.gif)
 
 ## Component API
 
