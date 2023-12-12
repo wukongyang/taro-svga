@@ -17,7 +17,7 @@ const Svga = forwardRef<SVGAPlayerRefs, SVGAPlayerProps>(
       onFrame = () => {},
       onPercentage = () => {},
       onLoadingEnd = () => {},
-      initState = "start",
+      initState = "pause",
       width = 400,
       height = 400,
       loops = 0,
