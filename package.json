@@ -2,15 +2,22 @@
   "name": "taro-svga",
   "version": "1.0.0",
   "description": "svga for taro",
+  "repository": "https://github.com/wukongyang/taro-svga",
+  "author": "wukongyang",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "readmeFilename": "README.md",
+  "keywords": [
+    "react-native",
+    "svga",
+    "taro",
+    "weapp"
+  ],
   "scripts": {
     "build:main": "tsc -p tsconfig.json",
-    "build:module": "tsc -p tsconfig.module.json"
+    "build:module": "tsc -p tsconfig.module.json",
+    "build": "npm run build:main && npm run build:module"
   },
   "files": [
     "build/main",
@@ -21,8 +28,7 @@
     "LICENSE",
     "README.md"
   ],
-  "author": "",
-  "license": "ISC",
+  "license": "LIC",
   "dependencies": {
     "@types/node": "^20.10.4",
     "typescript": "^5.3.3",
