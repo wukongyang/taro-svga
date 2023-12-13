@@ -14,8 +14,8 @@ const Svga = forwardRef<SVGAPlayerRefs, SVGAPlayerProps>(
   (
     {
       onFinished = () => {},
-      onFrame = () => {},
-      onPercentage = () => {},
+      onFrame,
+      onPercentage,
       onLoadingEnd = () => {},
       initState = "pause",
       width = 400,
@@ -67,6 +67,7 @@ const Svga = forwardRef<SVGAPlayerRefs, SVGAPlayerProps>(
       <>
         {src ? (
           <SVGAView
+            // @ts-ignore
             ref={svgaRef}
             source={src}
             style={{
@@ -76,7 +77,7 @@ const Svga = forwardRef<SVGAPlayerRefs, SVGAPlayerProps>(
             }}
             loops={loops}
             // 安卓初始化暂停，显示不出动画第一帧需要手动控制
-            currentState={Platform.OS === "android" ? "start" : initState}
+            currentState={Platform.OS === "android" ? "start" : initState as any}
             onFinished={() => {
               onFinished();
             }}
@@ -88,10 +89,10 @@ const Svga = forwardRef<SVGAPlayerRefs, SVGAPlayerProps>(
               onLoadingEnd();
             }}
             onPercentage={(value: number) => {
-              onPercentage(value);
+              onPercentage?.(value);
             }}
             onFrame={(value: number) => {
-              onFrame(value);
+              onFrame?.(value);
             }}
           />
         ) : (

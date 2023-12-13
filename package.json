@@ -1,6 +1,6 @@
 {
   "name": "taro-svga",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "svga for taro",
   "repository": "https://github.com/wukongyang/taro-svga",
   "author": "wukongyang",
@@ -26,6 +26,7 @@
     "!**/*.json",
     "CHANGELOG.md",
     "LICENSE",
+    "**.podspec",
     "README.md"
   ],
   "license": "LIC",
@@ -36,10 +37,10 @@
     "svgaplayer-tt": "^1.0.0",
     "svgaplayer-weapp": "^1.0.0",
     "svgaplayerweb": "^2.3.2",
+    "@tarojs/taro": "^3.6.17",
+    "@tarojs/components": "^3.6.17",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-native": "^0.70.1",
-    "@tarojs/taro": "3.6.17",
-    "@tarojs/components": "3.6.17"
+    "react-native": "^0.70.1"
   }
 }

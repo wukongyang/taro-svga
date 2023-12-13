@@ -11,7 +11,14 @@ yarn add taro-svga
 ```
 
 ### Extra Installing For React Native
+
 > Based on [svgaplayer-rn](https://github.com/wukongyang/SVGAPlayer-rn)
+
+you best do
+
+```
+yarn add svgaplayer-rn
+```
 
 android
 
@@ -44,6 +51,7 @@ const App = () => {
   );
 };
 ```
+
 ![img](./angle.gif)
 
 ## Component API
@@ -76,9 +84,11 @@ const App = () => {
 | **stepToPercentage(percentage: number, play: boolean): void** |    Jump to specified progress    |
 
 ## Possible issues
-**Building an OSAtomicCompareAndSwapPtrBarrier error when using SVGA on the iOS**  
+
+**Building an OSAtomicCompareAndSwapPtrBarrier error when using SVGA on the iOS**
 
 Build using xcode, locate the error file and add it at the top
+
 ```
 #include <libkern/OSAtomic.h>
 ```
